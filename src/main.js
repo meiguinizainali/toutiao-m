@@ -8,7 +8,14 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 // 加载全局样式
 import './styles/index.less'
+// 动态设置rem基准值
+import 'lib-flexible'// 自动配置rem 下载引入之后就不用管了
 // 注册使用vant组件库
 const app = createApp(App)
-app.use(Vant).use(store).use(router).mount('#app')
-// createApp(App).use(store).use(router).mount('#app')
+app
+  .use(Vant)
+  .use(store)
+  .use(router)
+  .mount('#app')
+
+// createApp(App).use(Vant).use(store).use(router).mount('#app')
